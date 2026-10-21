@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 
+import { fontFamily } from '../../theme/fonts';
 import { colors, radius, spacing, typography } from '../../theme/theme';
 
 /**
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
   label: {
     color: colors.text,
     fontSize: typography.key,
-    fontWeight: '500',
+    fontFamily: fontFamily.displayRegular,
   },
 });
 
@@ -58,9 +59,14 @@ const variantStyles = StyleSheet.create({
 });
 
 const labelStyles = StyleSheet.create({
-  memory: { color: colors.memoryText, fontSize: typography.keySmall, fontWeight: '700' },
-  function: { fontSize: typography.keySmall, fontWeight: '600' },
-  danger: { fontWeight: '700' },
-  accent: { color: colors.accentText, fontWeight: '700' },
-  operator: { fontWeight: '700' },
+  memory: {
+    color: colors.memoryText,
+    fontSize: typography.keySmall,
+    fontFamily: fontFamily.uiBold,
+    letterSpacing: 0.5,
+  },
+  function: { fontSize: typography.keySmall, fontFamily: fontFamily.uiSemiBold },
+  danger: { fontFamily: fontFamily.uiBold, letterSpacing: 0.5 },
+  accent: { color: colors.accentText, fontFamily: fontFamily.displayBold },
+  operator: { fontFamily: fontFamily.displayBold },
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { fontFamily } from '../../theme/fonts';
 import { colors, spacing, typography } from '../../theme/theme';
 
 /**
@@ -29,12 +30,14 @@ const styles = StyleSheet.create({
   title: {
     color: colors.text,
     fontSize: typography.title,
-    fontWeight: '700',
+    fontFamily: fontFamily.uiBold,
     letterSpacing: 0.3,
   },
   subtitle: {
-    marginTop: 2,
+    marginTop: 3,
     color: colors.textMuted,
     fontSize: typography.caption,
+    fontFamily: fontFamily.uiRegular,
+    letterSpacing: 0.4,
   },
 });

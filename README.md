@@ -23,6 +23,7 @@ src/
 │   ├── Display/Display.js    visor (valor, expressão e indicador de memória)
 │   ├── Header/Header.js      barra de título personalizada
 │   ├── Keypad/Keypad.js      grade de teclas a partir do layout
+│   ├── Splash/Splash.js      tela de carregamento das fontes
 │   └── index.js              barril de exportações
 ├── config/
 │   ├── app.js                nome do autor / título / limite do visor
@@ -32,12 +33,27 @@ src/
 │   ├── format.js             formatação/parse do visor
 │   └── operations.js         operações + registros BINARY/UNARY
 ├── hooks/
+│   ├── useAppFonts.js        hook customizado: carregamento das fontes
 │   ├── useCalculator.js      hook customizado: todo o estado e as regras
 │   └── useMemory.js          hook customizado: memória (MS/M+/MR/MC)
 ├── screens/
 │   └── CalculatorScreen.js   composição da tela (consome o hook)
-└── theme/theme.js            tokens de cor, espaçamento e tipografia
+└── theme/
+    ├── fonts.js              famílias de fonte + mapa de carregamento
+    └── theme.js              tokens de cor, espaçamento e tipografia
 ```
+
+## Tipografia
+
+| Fonte | Uso |
+|---|---|
+| **JetBrains Mono** (300/400/700) | visor, expressão e teclas numéricas — dígitos monoespaçados não deslocam o layout quando o valor muda |
+| **Inter** (400/500/600/700) | rótulos de interface: título, `MS`, `M+`, `log₂`, `AC` |
+
+Carregadas via `expo-font` + `@expo-google-fonts/*` no hook `useAppFonts`, que
+mostra `<Splash />` enquanto baixa e libera a interface com a fonte do sistema
+caso o carregamento falhe. Com fontes customizadas o React Native ignora
+`fontWeight`, por isso cada peso é uma família própria em `theme/fonts.js`.
 
 ## Requisitos funcionais atendidos
 

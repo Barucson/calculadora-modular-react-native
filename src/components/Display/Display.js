@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { fontFamily } from '../../theme/fonts';
 import { colors, radius, spacing, typography } from '../../theme/theme';
 
 /**
@@ -54,20 +55,23 @@ const styles = StyleSheet.create({
   memoryBadgeText: {
     color: colors.memoryText,
     fontSize: typography.caption,
-    fontWeight: '700',
+    fontFamily: fontFamily.uiBold,
+    letterSpacing: 0.5,
   },
   expression: {
     flex: 1,
     textAlign: 'right',
     color: colors.textMuted,
     fontSize: typography.expression,
+    fontFamily: fontFamily.displayRegular,
   },
   value: {
     marginTop: spacing.sm,
     textAlign: 'right',
     color: colors.text,
     fontSize: typography.display,
-    fontWeight: '300',
+    fontFamily: fontFamily.displayLight,
+    letterSpacing: -1,
   },
   valueError: {
     color: colors.danger,
