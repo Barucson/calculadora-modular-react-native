@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Calculadora Modular",
+    "slug": "calculadora-modular",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.puc.calculadoramodular"
+    },
+    "ios": {
+      "bundleIdentifier": "com.puc.calculadoramodular",
+      "supportsTablet": true
+    }
+  }
+}

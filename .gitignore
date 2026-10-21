@@ -1,0 +1,18 @@
+# dependencias
+node_modules/
+
+# expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# ferramentas locais
+.claude/
+.code-review-graph/
+
+# sistema / logs
+.DS_Store
+*.log
+npm-debug.*
+yarn-error.*
